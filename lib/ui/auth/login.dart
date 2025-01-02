@@ -24,30 +24,52 @@ class _SignInPageState extends State<SignInPage> {
   final TextEditingController passwordController = TextEditingController();
 
   ///login method
+
   void login() async {
-    // Get auth service
     final _authService = AuthService();
 
-    // try to sign in user
     try {
       await _authService.signInWithEmailPassword(
           emailController.text, passwordController.text);
+
+      // Navigate only if login succeeds
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => MainScreen()));
     } catch (e) {
       showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-            title: Text(
-              e.toString(),
-            ),
-          ));
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text("Error"),
+          content: Text(e.toString()),
+        ),
+      );
     }
-
-
-
-    // Navigate to HomePage after successful login
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) =>  MainScreen()));
   }
+
+  // void login() async {
+  //   // Get auth service
+  //   final _authService = AuthService();
+  //
+  //   // try to sign in user
+  //   try {
+  //     await _authService.signInWithEmailPassword(
+  //         emailController.text, passwordController.text);
+  //   } catch (e) {
+  //     showDialog(
+  //         context: context,
+  //         builder: (context) => AlertDialog(
+  //           title: Text(
+  //             e.toString(),
+  //           ),
+  //         ));
+  //   }
+  //
+  //
+  //
+  //   // Navigate to HomePage after successful login
+  //   Navigator.push(
+  //       context, MaterialPageRoute(builder: (context) =>  MainScreen()));
+  // }
 
   void dispose() {
     emailController.dispose();
@@ -78,7 +100,8 @@ class _SignInPageState extends State<SignInPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset('lib/images/logo2.png',),
+               // Image.asset('lib/images/logo2.png',),
+                SizedBox(height: 40,),
 
                 const Center(child: Text("Hello, get started by entering your ", style: TextStyle(color: Colors.grey),),),
                 const Center(child: Text("information", style: TextStyle(color: Colors.grey),), ),
@@ -105,36 +128,36 @@ class _SignInPageState extends State<SignInPage> {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        children: [
-                          IconButton(onPressed: () {  }, icon: Image.asset('lib/images/google.png', scale: 2.2,),),
-                          const  Text('Google', style: TextStyle(fontSize: 14),)
-                        ],
-                      ),
+                      // child: Row(
+                      //   children: [
+                      //     IconButton(onPressed: () {  }, icon: Image.asset('lib/images/google.png', scale: 2.2,),),
+                      //     const  Text('Google', style: TextStyle(fontSize: 14),)
+                      //   ],
+                      // ),
                     ),
                     Container(
                       padding: const EdgeInsets.only(left: 2, right: 6),
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        children: [
-                          IconButton(onPressed: () {  }, icon: Image.asset('lib/images/facebook.png', scale: 2.2,),),
-                          const  Text('Facebook', style: TextStyle(fontSize: 13),)
-                        ],
-                      ),
+                      // child: Row(
+                      //   children: [
+                      //     IconButton(onPressed: () {  }, icon: Image.asset('lib/images/facebook.png', scale: 2.2,),),
+                      //     const  Text('Facebook', style: TextStyle(fontSize: 13),)
+                      //   ],
+                      // ),
                     ),
                     Container(
                       padding: const EdgeInsets.only(left: 2, right: 6),
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Row(
-                        children: [
-                          IconButton(onPressed: () {  }, icon: Image.asset('lib/images/twitter.png', scale: 1.5,),),
-                          const  Text('Twitter', style: TextStyle(fontSize: 13),  )
-                        ],
-                      ),
+                      // child: Row(
+                      //   children: [
+                      //     IconButton(onPressed: () {  }, icon: Image.asset('lib/images/twitter.png', scale: 1.5,),),
+                      //     const  Text('Twitter', style: TextStyle(fontSize: 13),  )
+                      //   ],
+                      // ),
                     )
 
                   ],),

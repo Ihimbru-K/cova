@@ -1,6 +1,8 @@
-import 'package:complete_grocery/themes/dark_mode.dart';
-import 'package:complete_grocery/themes/light_mode.dart';
+
 import 'package:flutter/material.dart';
+
+import 'dark_mode.dart';
+import 'light_mode.dart';
 
 class ThemeProvider with ChangeNotifier{
 

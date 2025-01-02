@@ -22,29 +22,30 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController confirmPasswordController = TextEditingController();
 
   /// Register method
-  void register() {
+
+
+
+  void register() async {
     final _authService = AuthService();
 
-    // Check if passwords match before creating user
     if (passwordController.text == confirmPasswordController.text) {
       try {
-        _authService.signUpWithEmailPassword(
+        await _authService.signUpWithEmailPassword(
             emailController.text, passwordController.text);
 
-        // Navigate to HomePage after successful signup
-        Navigator.push(
+        // Navigate only if signup succeeds
+        Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => MainScreen()));
       } catch (e) {
-        // Display any errors
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text(e.toString()),
+            title: const Text("Error"),
+            content: Text(e.toString()),
           ),
         );
       }
     } else {
-      // Show error if passwords don't match
       showDialog(
         context: context,
         builder: (context) => const AlertDialog(
@@ -53,6 +54,38 @@ class _SignUpPageState extends State<SignUpPage> {
       );
     }
   }
+
+  // void register() {
+  //   final _authService = AuthService();
+  //
+  //   // Check if passwords match before creating user
+  //   if (passwordController.text == confirmPasswordController.text) {
+  //     try {
+  //       _authService.signUpWithEmailPassword(
+  //           emailController.text, passwordController.text);
+  //
+  //       // Navigate to HomePage after successful signup
+  //       Navigator.push(
+  //           context, MaterialPageRoute(builder: (context) => MainScreen()));
+  //     } catch (e) {
+  //       // Display any errors
+  //       showDialog(
+  //         context: context,
+  //         builder: (context) => AlertDialog(
+  //           title: Text(e.toString()),
+  //         ),
+  //       );
+  //     }
+  //   } else {
+  //     // Show error if passwords don't match
+  //     showDialog(
+  //       context: context,
+  //       builder: (context) => const AlertDialog(
+  //         title: Text("Passwords don't match"),
+  //       ),
+  //     );
+  //   }
+  // }
 
   @override
   void dispose() {
@@ -78,7 +111,8 @@ class _SignUpPageState extends State<SignUpPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('lib/images/logo2.png'),
+              SizedBox(height: 30,),
+             // Image.asset('lib/images/logo2.png'),
               const Center(
                   child: Text(
                     "Create your account by filling out the information below",
@@ -135,17 +169,7 @@ class _SignUpPageState extends State<SignUpPage> {
               const Text('------------ Or sign up with ------------'),
               const SizedBox(height: 30),
               // Social login buttons
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _socialLoginButton(
-                      iconPath: 'lib/images/google.png', text: 'Google'),
-                  _socialLoginButton(
-                      iconPath: 'lib/images/facebook.png', text: 'Facebook'),
-                  _socialLoginButton(
-                      iconPath: 'lib/images/twitter.png', text: 'Twitter'),
-                ],
-              ),
+
               const SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

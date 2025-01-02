@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:insura_ease/ui/products/product_screen.dart';
+import 'package:insura_ease/ui/profile/profile.dart';
 import 'package:insura_ease/ui/subscriptions/subscription_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -13,6 +14,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _pages = [
     ProductScreen(),
     SubscriptionScreen(),
+    const ProfilePage(),
 
   ];
 
