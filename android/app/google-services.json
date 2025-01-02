@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1048698255969",
+    "project_id": "insuraease-4bf92",
+    "storage_bucket": "insuraease-4bf92.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048698255969:android:790706aaa33e764f148820",
+        "android_client_info": {
+          "package_name": "com.example.insura_ease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT_yB-LrGz4h6xk5TQzshvN-8zqzke_eU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
