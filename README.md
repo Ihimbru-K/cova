@@ -77,6 +77,11 @@ flutter run
 
 ## Mock API Endpoints
 
+![image](https://github.com/user-attachments/assets/d48a6013-4ade-44a2-84c4-1c2fd95a5451)
+
+
+
+
 The application consumes the following mock API endpoint:
 
 - **Get Products**: `https://67665728410f8499965765c3.mockapi.io/insuraease/api/v1/Products`
