@@ -141,9 +141,44 @@ class ProductService {
 }
 ```
 
-## Screenshots
+## Firebase secure auth
+![image](https://github.com/user-attachments/assets/062a5e96-702a-4874-8328-9032fdcff0dd)
 
-Add screenshots of the application screens and API responses here.
+
+
+
+
+## Mock API for data
+![image](https://github.com/user-attachments/assets/3f0dcfa5-8a95-4ddf-992d-f0d37584e293)
+
+
+
+
+## Sample outputs
+###auth
+![image](https://github.com/user-attachments/assets/43c3e942-2315-4778-90f4-8a5447274e87)
+
+
+
+
+### Dashboard showing list of insurance products
+![image](https://github.com/user-attachments/assets/b20bddaf-97f0-4a8b-9be2-48fa76886f1e)
+
+
+
+### Subscribed insurance products
+![image](https://github.com/user-attachments/assets/c933a91d-152c-46dd-96cb-8f9365db13c4)
+
+
+
+
+### Profile and settings
+![image](https://github.com/user-attachments/assets/b76eeec8-cfe4-4cff-9a53-9a14d24e52f2)
+
+
+
+
+
 
 ## Future Improvements
 
@@ -158,7 +193,6 @@ Feel free to reach out for any questions or feedback!
 
 ---
 
-Thank you for exploring this project!
+Thank you for exploring this project
 ``` 
 
-This file is ready to copy and paste into your `README.md`. Let me know if you need any changes or additions!
