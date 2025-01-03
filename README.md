@@ -151,14 +151,6 @@ class ProductService {
 
 
 
-
-
-## Mock API for data
-![image](https://github.com/user-attachments/assets/3f0dcfa5-8a95-4ddf-992d-f0d37584e293)
-
-
-
-
 ## Sample outputs
 ###auth
 ![image](https://github.com/user-attachments/assets/43c3e942-2315-4778-90f4-8a5447274e87)
