@@ -12,7 +12,9 @@ class ProductScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Product List'),
+        elevation: 0.6,
+        centerTitle: true,
+        title: const Text('Insurance Products', style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: Consumer<ProductProvider>(
         builder: (context, productProvider, child) {

@@ -54,7 +54,7 @@ class SubscriptionScreen extends StatelessWidget {
                           ],
                         ), const SizedBox(height: 8),
                         Text(
-                          'Amount: \$${subscription.amount}',
+                          'Amount: ${subscription.amount} FCFA',
                           style: const TextStyle(
                             fontSize: 16,
                             color: Colors.green,
