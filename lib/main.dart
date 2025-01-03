@@ -6,7 +6,6 @@ import 'package:insura_ease/themes/theme_provider.dart';
 import 'package:insura_ease/ui/auth/login.dart';
 import 'package:provider/provider.dart';
 
-import './ui/mainscreen.dart';
 
 void main() async{
 
