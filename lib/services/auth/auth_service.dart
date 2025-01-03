@@ -19,7 +19,7 @@ class AuthService {
     }
   }
 
-// signup
+// signin
   Future<UserCredential> signInWithEmailPassword(
       String email, String password) async {
     try {
