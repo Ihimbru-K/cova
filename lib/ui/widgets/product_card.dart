@@ -59,7 +59,7 @@ class ProductCard extends StatelessWidget {
                   Subscription(
                     id: '', // MockAPI auto-generates
                     productId: product.id,
-                    productName: product.name, // Pass product name
+                    productName: product.name, 
                     userId: '1', // Mock user ID
                     subscriptionDate: DateTime.now().toIso8601String(),
                     startDate: DateTime.now().toIso8601String(),
